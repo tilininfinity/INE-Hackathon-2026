@@ -1,0 +1,14 @@
+# Parámetros del proyecto. Cada clave se define en contexto/propuesta_base.md.
+# Nada de números mágicos en el código: si un valor decide algo, vive aquí.
+# NOTA1: valores iniciales; se confirman al inspeccionar la Plataforma CCPC.
+
+fuente:
+  nombre: "Plataforma de los Conteos Censales de Participación Ciudadana (CCPC) 2009–2024"
+  url: "https://ine.mx/transparencia/datos-abiertos/visualizacion-datos/conteos-censales-participacion/"
+
+# Ventana de análisis. TODO1: confirmar qué elecciones y niveles trae la plataforma.
+elecciones: {desde: 2009, hasta: 2024}
+
+# Público y mensaje: los fija el equipo (contexto/propuesta_base.md).
+publico_objetivo: null
+mensaje_central: null

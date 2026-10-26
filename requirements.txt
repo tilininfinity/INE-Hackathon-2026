@@ -1,0 +1,28 @@
+# Python 3.13. Versiones fijas, resueltas con wheels para Windows (x86_64).
+# Instalar desde la raíz del repo: python -m pip install -r requirements.txt
+
+# Ingesta y configuración
+requests==2.34.2
+pyyaml==6.0.3
+tqdm==4.70.1
+
+# Datos
+numpy==2.5.3
+pandas==3.0.6
+pyarrow==25.0.1
+duckdb==1.5.6
+openpyxl==3.1.5
+
+# Visualización
+matplotlib==3.11.2
+
+# Notebooks (kernel para VS Code) y control de salidas
+ipykernel==7.4.0
+nbstripout==0.9.1
+
+# Pruebas
+pytest==9.1.1
+
+# El propio paquete `participa` en modo editable: notebooks y scripts importan
+# `from participa...` sin tocar sys.path
+-e .
