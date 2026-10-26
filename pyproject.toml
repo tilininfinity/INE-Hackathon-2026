@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "participa"
+version = "0.1.0"
+description = "Storytelling con los datos de la Plataforma CCPC 2009–2024 del INE (Hackathon INE 2026, Reto 3)."
+requires-python = ">=3.13"
+# Las dependencias con versión fija viven solo en requirements.txt
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
