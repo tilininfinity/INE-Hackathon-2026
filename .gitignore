@@ -1,0 +1,51 @@
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editores ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# --- Node / web ---
+node_modules/
+dist/
+build/
+.next/
+.cache/
+npm-debug.log*
+
+# --- Secretos ---
+.env
+.env.*
+!.env.example
+
+# --- Datos (se versionan solo los procesados y ligeros) ---
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+data/interim/*
+!data/interim/.gitkeep
+
+# --- Documentos con datos personales: NUNCA subir ---
+# Cartas firmadas, credenciales, estados de cuenta, etc.
+entregables/cartas/
+**/*carta*firmad*
+**/*INE_credencial*
+
+# --- Archivos pesados (súbanse a Drive/YouTube y enlácense) ---
+*.mp4
+*.mov
+*.zip
