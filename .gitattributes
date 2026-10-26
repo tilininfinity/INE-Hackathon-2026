@@ -1,5 +1,10 @@
-* text=auto eol=lf
-*.ipynb linguist-documentation
+# Normaliza finales de línea (Windows ↔ Linux)
+* text=auto
+*.ps1 text eol=crlf
 *.png binary
 *.jpg binary
 *.pdf binary
+
+# Los notebooks se guardan sin salidas: así el diff es legible y no se cuelan tablas.
+# El filtro se activa en cada clon con `nbstripout --install` (ver README).
+*.ipynb filter=nbstripout diff=ipynb

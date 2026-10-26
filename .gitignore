@@ -1,51 +1,60 @@
-# --- Sistema operativo ---
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# --- Editores ---
-.vscode/*
-!.vscode/extensions.json
-.idea/
-*.swp
-
-# --- Python ---
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-env/
-.ipynb_checkpoints/
-.pytest_cache/
-*.egg-info/
-
-# --- Node / web ---
-node_modules/
-dist/
-build/
-.next/
-.cache/
-npm-debug.log*
-
-# --- Secretos ---
+# ============================================================
+# Datos, salidas y secretos: nunca en git (reglas no negociables 1 y 2)
+# ============================================================
+data/
+outputs/
+logs/
 .env
 .env.*
 !.env.example
 
-# --- Datos (se versionan solo los procesados y ligeros) ---
-data/raw/*
-!data/raw/.gitkeep
-!data/raw/README.md
-data/interim/*
-!data/interim/.gitkeep
+# Formatos de datos en cualquier carpeta: defensa ante exportes sueltos
+# desde notebooks o scripts. Un resultado se comparte a propósito, nunca por accidente.
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.duckdb
+*.duckdb.wal
+*.db
+*.sqlite
+*.gz
+*.zip
+*.log
+*.json
+!tests/fixtures/**/*.json
+!.vscode/*.json
 
-# --- Documentos con datos personales: NUNCA subir ---
-# Cartas firmadas, credenciales, estados de cuenta, etc.
-entregables/cartas/
-**/*carta*firmad*
-**/*INE_credencial*
-
-# --- Archivos pesados (súbanse a Drive/YouTube y enlácense) ---
+# Video y material pesado: se arma y se aloja fuera del repo
 *.mp4
 *.mov
-*.zip
+
+# Documentos personales de la entrega (cartas firmadas, credenciales para votar,
+# estados de cuenta): el repositorio es público
+cartas/
+**/*carta*firmad*
+
+# ============================================================
+# Python y entorno
+# ============================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ============================================================
+# Sistema operativo y editores
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
